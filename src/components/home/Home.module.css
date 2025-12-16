@@ -19,7 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/src/components/home/bg-pink.png");
+    background-image: url("/public/bg-pink.png");
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
