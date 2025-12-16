@@ -10,7 +10,7 @@
     gap: 15px;
     border: 15px solid var(--border-color-1);
     padding: 15px;
-    background-image: url("/src/components/card/bg-pink.png");
+    background-image: url("/public/bg-pink_2.png");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;

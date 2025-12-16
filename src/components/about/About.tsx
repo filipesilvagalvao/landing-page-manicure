@@ -1,4 +1,5 @@
 import styles from "./About.module.css"
+import presentation from "/public/presentation.mp4"
 
 function About() {
     return (
@@ -6,7 +7,7 @@ function About() {
             <div className={styles.about__container}>
 
                 <div className={styles.about__video}>
-                    <iframe src="/src/components/about/presentation.mp4"></iframe>
+                    <iframe src={presentation}></iframe>
                 </div>
                 <div className={styles.about__text}>
                     <h2 className={styles.about__title}>Sobre nós</h2>

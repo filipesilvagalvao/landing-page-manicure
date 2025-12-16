@@ -1,9 +1,10 @@
 import styles from './Footer.module.css'
+import wave from "/public/wave.svg"
 
 function Footer() {
     return (
         <footer className={styles.footer}>
-            <img src="/src/components/footer/wave.svg" alt="wave" className={styles.footer__wave} />
+            <img src={wave} alt="wave" className={styles.footer__wave} />
 
             <div className={styles.footer__content}>
                 <p>&copy; Todos os direitos reservados.</p>

@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react"
 import { gsap } from "gsap";
 import styles from "./Home.module.css"
+import hands from "/public/maos-femininas.png"
 
 function Home() {
     useGSAP(() => {
@@ -13,7 +14,7 @@ function Home() {
             <div className={styles.home__container}>
 
                 <div className={styles.home__art}>
-                    <img src="/src/components/home/maos-femininas.png" alt="mãos femininas" className={styles.header__img} />
+                    <img src={hands} alt="mãos femininas" className={styles.header__img} />
                 </div>
 
                 <div className={styles.home__cta}>
