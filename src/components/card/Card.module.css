@@ -1,0 +1,60 @@
+
+.card {
+    height: auto;
+    width: auto;
+    background-color: var(--bg-color-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border: 15px solid var(--border-color-1);
+    padding: 15px;
+    background-image: url("/src/components/card/bg-pink.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform-origin: center;
+    transition: transform 320ms cubic-bezier(.2,.9,.3,1), opacity 420ms ease, box-shadow 320ms ease;
+    will-change: transform, opacity;
+    opacity: 1;
+    transform: none;
+}
+
+.visible {
+    opacity: 1;
+    transform: none;
+}
+
+.card__title {
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+
+.card__list {
+    width: 80%;
+}
+.card__list li {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.card__time{
+    font-weight: bold;
+}
+
+.card svg {
+    width: 50%;
+    height: auto;
+    transition: transform 420ms ease, opacity 420ms ease;
+}
+.visible svg {
+    transform: translateY(0);
+    opacity: 1;
+}

@@ -1,0 +1,111 @@
+.header{
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 90%;
+    margin: auto;
+}
+
+/*Início Menu toggle*/
+
+.header__checkbox{
+    display: none;
+}
+
+.header__menuToggle{
+    position: relative;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+
+    span{
+        width: 40px;
+        height: 2px;
+        background-color: var(--text-color-1);
+        transition: all 0.3s ease;
+    }
+
+}
+
+.header__checkbox:checked + .header__menuToggle{
+
+    transform: scale(1,1);
+
+    span:nth-child(1){
+        transform: rotate(45deg) translateY(16.5px);
+    }
+
+    span:nth-child(2){
+        opacity: 0;
+    }
+
+    span:nth-child(3){
+        transform: rotate(-45deg) translateY(-16.5px);
+    }
+}
+
+.header__checkbox:checked ~ .header__nav{
+    transform: scale(1,1);
+}
+/*Fim Menu toggle*/
+
+.header__nav{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transition: all 0.3s ease;
+    z-index: 10;
+    a{
+        text-decoration: none;
+        color: var(--text-color-1);
+        font-weight: 500;
+        transition: color 0.3s;
+
+        &:hover{
+            color: var(--text-color-2);
+        }
+    }
+}
+
+.header__social{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    a{
+        color: var(--text-color-1);
+        font-size: 1.2em;
+        transition: color 0.3s;
+
+        &:hover{
+            color: var(--text-color-2);
+        }
+    }
+}
+
+
+@media (max-width:768px){
+    .header__menuToggle{
+        display: flex;
+    }
+
+    .header__nav{
+        position: absolute;
+        top: 80px;
+        right: 50px;
+        flex-direction: column;
+        border-radius: 5px 0 5px 5px;
+        box-shadow: 4px 4px 16px 3px #00000026;
+        padding: 15px;
+        transform: scale(0,0);
+        background-color: var(--bg-color-1);
+    }
+}
