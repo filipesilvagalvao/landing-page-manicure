@@ -23,6 +23,7 @@ body {
     background-color: var(--bg-color-1);
     color: var(--text-color-1);
     position: relative;
+    overflow-x: hidden;
 }
 
 .schedule{
