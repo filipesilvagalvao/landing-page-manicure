@@ -1,10 +1,19 @@
-.header{
+.header {
     letter-spacing: 0.2em;
     font-weight: 600;
     text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-.header__container{
+.header__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,18 +24,18 @@
 
 /*Início Menu toggle*/
 
-.header__checkbox{
+.header__checkbox {
     display: none;
 }
 
-.header__menuToggle{
+.header__menuToggle {
     position: relative;
     display: none;
     flex-direction: column;
     gap: 10px;
     cursor: pointer;
 
-    span{
+    span {
         width: 40px;
         height: 2px;
         background-color: var(--text-color-1);
@@ -35,69 +44,71 @@
 
 }
 
-.header__checkbox:checked + .header__menuToggle{
+.header__checkbox:checked+.header__menuToggle {
 
-    transform: scale(1,1);
+    transform: scale(1, 1);
 
-    span:nth-child(1){
+    span:nth-child(1) {
         transform: rotate(45deg) translateY(16.5px);
     }
 
-    span:nth-child(2){
+    span:nth-child(2) {
         opacity: 0;
     }
 
-    span:nth-child(3){
+    span:nth-child(3) {
         transform: rotate(-45deg) translateY(-16.5px);
     }
 }
 
-.header__checkbox:checked ~ .header__nav{
-    transform: scale(1,1);
+.header__checkbox:checked~.header__nav {
+    transform: scale(1, 1);
 }
+
 /*Fim Menu toggle*/
 
-.header__nav{
+.header__nav {
     display: flex;
     align-items: center;
     gap: 30px;
     transition: all 0.3s ease;
     z-index: 10;
-    a{
+
+    a {
         text-decoration: none;
         color: var(--text-color-1);
         font-weight: 500;
         transition: color 0.3s;
 
-        &:hover{
+        &:hover {
             color: var(--text-color-2);
         }
     }
 }
 
-.header__social{
+.header__social {
     display: flex;
     align-items: center;
     gap: 20px;
 
-    a{
+    a {
         color: var(--text-color-1);
         font-size: 1.2em;
         transition: color 0.3s;
 
-        &:hover{
+        &:hover {
             color: var(--text-color-2);
         }
     }
 }
 
 
-@media (max-width:768px){
-    .header__menuToggle{
+@media (max-width:768px) {
+    .header__menuToggle {
         display: flex;
     }
 
-    .header__nav{
+    .header__nav {
         position: absolute;
         top: 80px;
         right: 50px;
@@ -105,7 +116,7 @@
         border-radius: 5px 0 5px 5px;
         box-shadow: 4px 4px 16px 3px #00000026;
         padding: 15px;
-        transform: scale(0,0);
+        transform: scale(0, 0);
         background-color: var(--bg-color-1);
     }
 }
