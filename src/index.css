@@ -7,6 +7,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 :root{
     --bg-color-1:#F3EBDD;
     --bg-color-2:#E2D5BF;
